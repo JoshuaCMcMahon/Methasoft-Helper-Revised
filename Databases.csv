@@ -1,0 +1,201 @@
+Name,Dropdown Name,URL,Legacy/M2M,Type,Zone,Region,State,Methasoft Version
+! Corporate Dashboard - 7143,https://www.methasoft-support.net/Methasoft.Net.CMG.Corporate.7143,https://www.methasoft-support.net/Methasoft.Net.CMG.Corporate.7143,Legacy,Dashboard,,,,7.1.4.3
+! Corporate Dashboard - 7804,https://www.Methasoft-Support.net/Methasoft.net.CMG.Corporate,https://www.Methasoft-Support.net/Methasoft.net.CMG.Corporate,Legacy,Dashboard,,,,7.8.0.4
+! Corporate Dashboard - 8130,! Corporate Dashboard - 8130,https://www.Methasoft-support.Net/Methasoft.Net.CMG.Corporate.8130,Legacy,Dashboard,,,,8.1.3.0
+Akron - Legacy,Akron - Legacy,https://CMG-Akr.netalytics-cloud.com/Methasoft.Net.CMG.Akron,Legacy,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Akron - M2M,Akron - M2M,https://NS-Akr.netalytics-cloud.com/Methasoft.Net.NewSeason.Akron,M2M,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Albuquerque North - Legacy,Albuquerque North - Legacy,https://CMG-AlbuNorth.netalytics-cloud.com/Methasoft.Net.CMG.AlbuquerqueNorth,Legacy,Live,Coast to Coasties,West,New Mexico,8.1.3.0
+Albuquerque North - M2M,Albuquerque North - M2M,https://NS-AlbuNorth.netalytics-cloud.com/Methasoft.Net.NewSeason.AlbuquerqueNorth,M2M,Live,Coast to Coasties,West,New Mexico,8.1.3.0
+Atlanta - Legacy,Atlanta - Legacy,https://cmg-atl.netalytics-cloud.com/Methasoft.Net.CMG.Atlanta,Legacy,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Atlanta - M2M,Atlanta - M2M,https://NS-atl.netalytics-cloud.com/Methasoft.Net.NewSeason.Atlanta,M2M,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Augusta - Legacy,Augusta - Legacy,https://cmg-aug.netalytics-cloud.com/Methasoft.Net.CMG.Augusta,Legacy,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Augusta - M2M,Augusta - M2M,https://NS-aug.netalytics-cloud.com/Methasoft.Net.NewSeason.Augusta,M2M,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Bay Area - Legacy,Bay Area - Legacy,https://cmg-BayArea.netalytics-cloud.com/Methasoft.Net.CMG.BayArea,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Bay Area - M2M,Bay Area - M2M,https://NS-BayArea.netalytics-cloud.com/Methasoft.Net.NewSeason.BayArea,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Biloxi - Legacy,Biloxi - Legacy,https://cmg-bil.netalytics-cloud.com/Methasoft.Net.CMG.Biloxi,Legacy,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Biloxi - M2M,Biloxi - M2M,https://NS-bil.netalytics-cloud.com/Methasoft.Net.NewSeason.Biloxi,M2M,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Birmingham - Legacy,Birmingham - Legacy,https://cmg-bir.netalytics-cloud.com/Methasoft.Net.CMG.Birmingham,Legacy,Live,Treatment Titans,South,Alabama,8.1.3.0
+Birmingham - M2M,Birmingham - M2M,https://NS-bir.netalytics-cloud.com/Methasoft.Net.NewSeason.Birmingham,M2M,Live,Treatment Titans,South,Alabama,8.1.3.0
+Bountiful - Legacy,Bountiful - Legacy,https://cmg-bount.netalytics-cloud.com/methasoft.net.CMG.Bountiful,Legacy,Live,Coast to Coasties,West,Utah,8.1.3.0
+Bountiful - M2M,Bountiful - M2M,https://NS-bount.netalytics-cloud.com/methasoft.net.NewSeason.Bountiful,M2M,Live,Coast to Coasties,West,Utah,8.1.3.0
+Bradenton - M2M,Bradenton - M2M,https://NS-Brad.netalytics-cloud.com/Methasoft.Net.NewSeason.Bradenton,M2M,Live,,,Florida,8.1.3.0
+Brandon - Legacy,Brandon - Legacy,https://CMG-BR.netalytics-cloud.com/Methasoft.Net.CMG.Brandon,Legacy,Live,Coast to Coasties,,Florida,8.1.3.0
+Brandon - M2M,Brandon - M2M,https://NS-BR.netalytics-cloud.com/Methasoft.Net.NewSeason.Brandon,M2M,Live,Coast to Coasties,,Florida,8.1.3.0
+Broward - Legacy,Broward - Legacy,https://cmg-bro.netalytics-cloud.com/Methasoft.Net.CMG.Broward,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Broward - M2M,Broward - M2M,https://NS-bro.netalytics-cloud.com/Methasoft.Net.NewSeason.Broward,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Cape Girardeau - Legacy,Cape Girardeau - Legacy,https://cmg-cap.netalytics-cloud.com/Methasoft.Net.CMG.CapeGiradeau,Legacy,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+Cape Girardeau - M2M,Cape Girardeau - M2M,https://NS-cap.netalytics-cloud.com/Methasoft.Net.NewSeason.CapeGiradeau,M2M,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+Central New Mexico - Legacy,Central New Mexico - Legacy,https://cmg-cnm.netalytics-cloud.com/methasoft.net.CMG.CentralNewMexico,Legacy,Live,Coast to Coasties,West,New Mexico,8.1.3.0
+Central New Mexico - M2M,Central New Mexico - M2M,https://NS-cnm.netalytics-cloud.com/methasoft.net.NewSeason.CentralNewMexico,M2M,Live,Coast to Coasties,West,New Mexico,8.1.3.0
+Charlotte - Legacy,Charlotte - Legacy,https://cmg-cha.netalytics-cloud.com/Methasoft.Net.CMG.Charlotte,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Charlotte - M2M,Charlotte - M2M,https://NS-cha.netalytics-cloud.com/Methasoft.Net.NewSeason.Charlotte,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Columbia - Legacy,Columbia - Legacy,https://cmg-colu.netalytics-cloud.com/Methasoft.Net.CMG.Columbia,Legacy,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+Columbia - M2M,Columbia - M2M,https://NS-colu.netalytics-cloud.com/Methasoft.Net.NewSeason.Columbia,M2M,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+Columbus (Georgia) - Legacy,Columbus (Georgia) - Legacy,https://cmg-col.netalytics-cloud.com/Methasoft.Net.CMG.Columbus,Legacy,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Columbus (Georgia) - M2M,Columbus (Georgia) - M2M,https://NS-col.netalytics-cloud.com/Methasoft.Net.NewSeason.Columbus,M2M,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Columbus West (Ohio) - Legacy,Columbus West (Ohio) - Legacy,https://cmg-coluw.netalytics-cloud.com/Methasoft.NET.CMG.ColumbusWest,Legacy,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Columbus West (Ohio) - M2M,Columbus West (Ohio) - M2M,https://NS-coluw.netalytics-cloud.com/Methasoft.NET.NewSeason.ColumbusWest,M2M,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Concord - Legacy,Concord - Legacy,https://cmg-con.netalytics-cloud.com/Methasoft.Net.CMG.Concord,Legacy,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Concord - M2M,Concord - M2M,https://NS-con.netalytics-cloud.com/Methasoft.Net.NewSeason.Concord,M2M,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Covington - Legacy,Covington - Legacy,https://cmg-cov.netalytics-cloud.com/Methasoft.Net.CMG.Covington,Legacy,Live,Coast to Coasties,Keystone,Kentucky,8.1.3.0
+Covington - M2M,Covington - M2M,https://NS-cov.netalytics-cloud.com/Methasoft.Net.NewSeason.Covington,M2M,Live,Coast to Coasties,Keystone,Kentucky,8.1.3.0
+Dakota - Legacy,Dakota - Legacy,https://cmg-dak.netalytics-cloud.com/Methasoft.Net.CMG.Dakota,Legacy,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+Dakota - M2M,Dakota - M2M,https://NS-dak.netalytics-cloud.com/Methasoft.Net.NewSeason.Dakota,M2M,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+Dallas - Legacy,Dallas - Legacy,https://cmg-dal.netalytics-cloud.com/Methasoft.Net.CMG.Dallas,Legacy,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+Dallas - M2M,Dallas - M2M,https://NS-dal.netalytics-cloud.com/Methasoft.Net.NewSeason.Dallas,M2M,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+Daytona - Legacy,Daytona - Legacy,https://cmg-day.netalytics-cloud.com/Methasoft.Net.CMG.Daytona,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Daytona - M2M,Daytona - M2M,https://NS-day.netalytics-cloud.com/Methasoft.Net.NewSeason.Daytona,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Desoto (Walls) - Legacy,Desoto (Walls) - Legacy,https://cmg-deso.netalytics-cloud.com/Methasoft.Net.CMG.Desoto,Legacy,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Desoto (Walls) - M2M,Desoto (Walls) - M2M,https://NS-deso.netalytics-cloud.com/Methasoft.Net.NewSeason.Desoto,M2M,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Durham - Legacy,Durham - Legacy,https://cmg-dur.netalytics-cloud.com/Methasoft.Net.CMG.Durham,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Durham - M2M,Durham - M2M,https://NS-dur.netalytics-cloud.com/Methasoft.Net.NewSeason.Durham,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Duval - Legacy,Duval - Legacy,https://cmg-duv.netalytics-cloud.com/Methasoft.Net.CMG.Duval,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Duval - M2M,Duval - M2M,https://NS-duv.netalytics-cloud.com/Methasoft.Net.NewSeason.Duval,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Fayetteville - Legacy,Fayetteville - Legacy,https://cmg-fay.netalytics-cloud.com/Methasoft.Net.CMG.Fayetteville,Legacy,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+Fayetteville - M2M,Fayetteville - M2M,https://NS-fay.netalytics-cloud.com/Methasoft.Net.NewSeason.Fayetteville,M2M,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+Franklin - Legacy,Franklin - Legacy,https://cmg-fra.netalytics-cloud.com/Methasoft.Net.CMG.Franklin,Legacy,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Franklin - M2M,Franklin - M2M,https://NS-fra.netalytics-cloud.com/Methasoft.Net.NewSeason.Franklin,M2M,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Gastonia - Legacy,Gastonia - Legacy,https://cmg-gas.netalytics-cloud.com/Methasoft.Net.CMG.Gastonia,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Gastonia - M2M,Gastonia - M2M,https://NS-gas.netalytics-cloud.com/Methasoft.Net.NewSeason.Gastonia,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Grand Junction - Legacy,Grand Junction - Legacy,https://cmg-grand.netalytics-cloud.com/methasoft.net.CMG.GrandJunction,Legacy,Live,Coast to Coasties,West,Colorado,8.1.3.0
+Grand Junction - M2M,Grand Junction - M2M,https://NS-grand.netalytics-cloud.com/methasoft.net.NewSeason.GrandJunction,M2M,Live,Coast to Coasties,West,Colorado,8.1.3.0
+Greensboro - Legacy,Greensboro - Legacy,https://cmg-grn.netalytics-cloud.com/Methasoft.Net.CMG.Greensboro,Legacy,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+Greensboro - M2M,Greensboro - M2M,https://NS-grn.netalytics-cloud.com/Methasoft.Net.NewSeason.Greensboro,M2M,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+Greenville - Legacy,Greenville - Legacy,https://cmg-gre.netalytics-cloud.com/Methasoft.Net.CMG.GreenvilleMetro,Legacy,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+Greenville - M2M,Greenville - M2M,https://NS-gre.netalytics-cloud.com/Methasoft.Net.NewSeason.GreenvilleMetro,M2M,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+Hagerstown - Legacy,Hagerstown - Legacy,https://cmg-hag.netalytics-cloud.com/Methasoft.Net.CMG.Hagerstown,Legacy,Live,Coast to Coasties,Keystone,Maryland,8.1.3.0
+Hagerstown - M2M,Hagerstown - M2M,https://NS-hag.netalytics-cloud.com/Methasoft.Net.NewSeason.Hagerstown,M2M,Live,Coast to Coasties,Keystone,Maryland,8.1.3.0
+Harrisonburg - Legacy,Harrisonburg - Legacy,https://cmg-har.netalytics-cloud.com/Methasoft.Net.CMG.Harrisonburg,Legacy,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Harrisonburg - M2M,Harrisonburg - M2M,https://NS-har.netalytics-cloud.com/Methasoft.Net.NewSeason.Harrisonburg,M2M,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Hickory - Legacy,Hickory - Legacy,https://cmg-hic.netalytics-cloud.com/Methasoft.Net.CMG.Hickory,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Hickory - M2M,Hickory - M2M,https://NS-hic.netalytics-cloud.com/Methasoft.Net.NewSeason.Hickory,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Huntsville - Legacy,Huntsville - Legacy,https://cmg-hun.netalytics-cloud.com/Methasoft.Net.CMG.Huntsville,Legacy,Live,Treatment Titans,South,Alabama,8.1.3.0
+Huntsville - M2M,Huntsville - M2M,https://NS-hun.netalytics-cloud.com/Methasoft.Net.NewSeason.Huntsville,M2M,Live,Treatment Titans,South,Alabama,8.1.3.0
+Jacksonville - Legacy,Jacksonville - Legacy,https://cmg-jac.netalytics-cloud.com/Methasoft.Net.CMG.Jacksonville,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Jacksonville - M2M,Jacksonville - M2M,https://NS-jac.netalytics-cloud.com/Methasoft.Net.NewSeason.Jacksonville,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Keene - Legacy,Keene - Legacy,https://cmg-kee.netalytics-cloud.com/Methasoft.Net.CMG.Keene,Legacy,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Keene - M2M,Keene - M2M,https://NS-kee.netalytics-cloud.com/Methasoft.Net.NewSeason.Keene,M2M,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Kissimmee (Mid Florida) - Legacy,Kissimmee (Mid Florida) - Legacy,https://cmg-kis.netalytics-cloud.com/Methasoft.Net.CMG.Kissimmee,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Kissimmee (Mid Florida) - M2M,Kissimmee (Mid Florida) - M2M,https://NS-kis.netalytics-cloud.com/Methasoft.Net.NewSeason.MidFlorida,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Lee County - Legacy,Lee County - Legacy,https://cmg-lee.netalytics-cloud.com/Methasoft.Net.CMG.Lee,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Lee County - M2M,Lee County - M2M,https://NS-lee.netalytics-cloud.com/Methasoft.Net.NewSeason.Lee,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Leesburg - M2M,Leesburg - M2M,https://NS-lees.netalytics-cloud.com/Methasoft.Net.NewSeason.Leesburg,M2M,Live,,,Florida,8.1.3.0
+Leon County - Legacy,Leon County - Legacy,https://cmg-leo.netalytics-cloud.com/Methasoft.Net.CMG.LeonCounty,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Leon County - M2M,Leon County - M2M,https://NS-leo.netalytics-cloud.com/Methasoft.Net.NewSeason.LeonCounty,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Manchester - Legacy,Manchester - Legacy,https://cmg-man.netalytics-cloud.com/Methasoft.Net.CMG.Manchester,Legacy,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Manchester - M2M,Manchester - M2M,https://NS-man.netalytics-cloud.com/Methasoft.Net.NewSeason.Manchester,M2M,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Manchester West - Legacy,Manchester West - Legacy,https://cmg-manw.netalytics-cloud.com/Methasoft.Net.CMG.ManchesterWest,Legacy,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Manchester West - M2M,Manchester West - M2M,https://NS-MANW.netalytics-cloud.com/Methasoft.Net.NewSeason.ManchesterWest,M2M,Live,Coast to Coasties,Northeast,New Hampshire,8.1.3.0
+Mason (Cincinnati North) - Legacy,Mason (Cincinnati North) - Legacy,https://cmg-mas.netalytics-cloud.com/Methasoft.Net.CMG.Mason,Legacy,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Mason (Cincinnati North) - M2M,Mason (Cincinnati North) - M2M,https://NS-mas.netalytics-cloud.com/Methasoft.Net.NewSeason.Mason,M2M,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Mentor - Legacy,Mentor - Legacy,https://CMG-Men.netalytics-cloud.com/Methasoft.Net.CMG.Mentor,Legacy,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Mentor - M2M,Mentor - M2M,https://NS-Men.netalytics-cloud.com/Methasoft.Net.NewSeason.Mentor,M2M,Live,Coast to Coasties,Keystone,Ohio,8.1.3.0
+Meridian - Legacy,Meridian - Legacy,https://cmg-mer.netalytics-cloud.com/Methasoft.Net.CMG.Meridian,Legacy,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Meridian - M2M,Meridian - M2M,https://NS-mer.netalytics-cloud.com/Methasoft.Net.NewSeason.Meridian,M2M,Live,Treatment Titans,Gulf,Mississippi,8.1.3.0
+Mobile - Legacy,Mobile - Legacy,https://cmg-mob.netalytics-cloud.com/Methasoft.Net.CMG.Mobile,Legacy,Live,Treatment Titans,South,Alabama,8.1.3.0
+Mobile - M2M,Mobile - M2M,https://NS-mob.netalytics-cloud.com/Methasoft.Net.NewSeason.Mobile,M2M,Live,Treatment Titans,South,Alabama,8.1.3.0
+Montgomery - Legacy,Montgomery - Legacy,https://cmg-Mon.netalytics-cloud.com/Methasoft.Net.CMG.Montgomery,Legacy,Live,Treatment Titans,South,Alabama,8.1.3.0
+Montgomery - M2M,Montgomery - M2M,https://NS-mon.netalytics-cloud.com/Methasoft.Net.NewSeason.Montgomery,M2M,Live,Treatment Titans,South,Alabama,8.1.3.0
+Morganton - Legacy,Morganton - Legacy,https://cmg-mor.netalytics-cloud.com/Methasoft.Net.CMG.Morganton,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Morganton - M2M,Morganton - M2M,https://NS-mor.netalytics-cloud.com/Methasoft.Net.NewSeason.Morganton,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Naples - Legacy,Naples - Legacy,https://cmg-nap.netalytics-cloud.com/Methasoft.Net.CMG.Naples,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Naples - M2M,Naples - M2M,https://NS-nap.netalytics-cloud.com/Methasoft.Net.NewSeason.Naples,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+New Hanover - Legacy,New Hanover - Legacy,https://cmg-nha.netalytics-cloud.com/Methasoft.Net.CMG.NewHanover,Legacy,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+New Hanover - M2M,New Hanover - M2M,https://NS-nha.netalytics-cloud.com/Methasoft.Net.NewSeason.NewHanover,M2M,Live,Treatment Titans,Mid-Atlantic,North Carolina,8.1.3.0
+North Charlotte - Legacy,North Charlotte - Legacy,https://cmg-nch.netalytics-cloud.com/Methasoft.Net.CMG.NorthCharlotte,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+North Charlotte - M2M,North Charlotte - M2M,https://NS-nch.netalytics-cloud.com/Methasoft.Net.NewSeason.NorthCharlotte,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Northwest Georgia - Legacy,Northwest Georgia - Legacy,https://cmg-nwg.netalytics-cloud.com/Methasoft.Net.CMG.NorthwestGeorgia,Legacy,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Northwest Georgia - M2M,Northwest Georgia - M2M,https://NS-nwg.netalytics-cloud.com/Methasoft.Net.NewSeason.NorthwestGeorgia,M2M,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+NW San Antonio - Legacy,NW San Antonio - Legacy,https://cmg-nws.netalytics-cloud.com/Methasoft.Net.CMG.NWSanAntonio,Legacy,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+NW San Antonio - M2M,NW San Antonio - M2M,https://NS-nws.netalytics-cloud.com/Methasoft.Net.NewSeason.NWSanAntonio,M2M,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+Orange Park - Legacy,Orange Park - Legacy,https://CMG-OP.netalytics-cloud.com/Methasoft.Net.CMG.Orange.Park,Legacy,Live,Coast to Coasties,North Florida,Florida,8.1.3.0
+Orange Park - M2M,Orange Park - M2M,https://NS-OP.netalytics-cloud.com/Methasoft.Net.NewSeason.Orange.Park,M2M,Live,Coast to Coasties,North Florida,Florida,8.1.3.0
+Orlando - Legacy,Orlando - Legacy,https://cmg-orl.netalytics-cloud.com/Methasoft.Net.CMG.Orlando,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Orlando - M2M,Orlando - M2M,https://NS-orl.netalytics-cloud.com/Methasoft.Net.NewSeason.Orlando,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Penobscot - Legacy,Penobscot - Legacy,https://cmg-pen.netalytics-cloud.com/Methasoft.Net.CMG.Penobscot,Legacy,Live,Coast to Coasties,Northeast,Maine,8.1.3.0
+Penobscot - M2M,Penobscot - M2M,https://NS-pen.netalytics-cloud.com/Methasoft.Net.NewSeason.Penobscot,M2M,Live,Coast to Coasties,Northeast,Maine,8.1.3.0
+Pensacola - Legacy,Pensacola - Legacy,https://cmg-pens.netalytics-cloud.com/Methasoft.Net.CMG.Pensacola,Legacy,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Pensacola - M2M,Pensacola - M2M,https://NS-pens.netalytics-cloud.com/Methasoft.Net.NewSeason.Pensacola,M2M,Live,Treatment Titans,North Florida,Florida,8.1.3.0
+Pompano - Legacy,Pompano - Legacy,https://cmg-pom.netalytics-cloud.com/Methasoft.Net.CMG.Pompano,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Pompano - M2M,Pompano - M2M,https://NS-pom.netalytics-cloud.com/Methasoft.Net.NewSeason.Pompano,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Portland - Legacy,Portland - Legacy,https://cmg-port.netalytics-cloud.com/methasoft.net.CMG.Portland,Legacy,Live,Coast to Coasties,West,Oregon,8.1.3.0
+Portland - M2M,Portland - M2M,https://NS-port.netalytics-cloud.com/methasoft.net.NewSeason.Portland,M2M,Live,Coast to Coasties,West,Oregon,8.1.3.0
+Quad County - Legacy,Quad County - Legacy,https://cmg-qua.netalytics-cloud.com/Methasoft.Net.CMG.QuadCounty,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Quad County - M2M,Quad County - M2M,https://NS-qua.netalytics-cloud.com/Methasoft.Net.NewSeason.QuadCounty,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Raleigh - Legacy,Raleigh - Legacy,https://cmg-ral.netalytics-cloud.com/Methasoft.Net.CMG.Raleigh,Legacy,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Raleigh - M2M,Raleigh - M2M,https://NS-ral.netalytics-cloud.com/Methasoft.Net.NewSeason.Raleigh,M2M,Live,Treatment Titans,Carolinas,North Carolina,8.1.3.0
+Richmond - Legacy,Richmond - Legacy,https://cmg-ric.netalytics-cloud.com/Methasoft.Net.CMG.Richmond,Legacy,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Richmond - M2M,Richmond - M2M,https://NS-ric.netalytics-cloud.com/Methasoft.Net.NewSeason.Richmond,M2M,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Richmond Southside - Legacy,Richmond Southside - Legacy,https://cmg-ricss.Netalytics-Cloud.com/Methasoft.Net.CMG.RichmondSouthside,Legacy,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Richmond Southside - M2M,Richmond Southside - M2M,https://NS-ricss.netalytics-cloud.com/Methasoft.Net.NewSeason.RichmondSouthside,M2M,Live,Treatment Titans,Mid-Atlantic,Virginia,8.1.3.0
+Rochester - Legacy,Rochester - Legacy,https://cmg-roch.netalytics-cloud.com/Methasoft.Net.CMG.Rochester,Legacy,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+Rochester - M2M,Rochester - M2M,https://NS-roch.netalytics-cloud.com/Methasoft.Net.NewSeason.Rochester,M2M,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+Rockland - Legacy,Rockland - Legacy,https://cmg-roc.netalytics-cloud.com/Methasoft.Net.CMG.Rockland,Legacy,Live,Coast to Coasties,Northeast,Maine,8.1.3.0
+Rockland - M2M,Rockland - M2M,https://NS-roc.netalytics-cloud.com/Methasoft.Net.NewSeason.Rockland,M2M,Live,Coast to Coasties,Northeast,Maine,8.1.3.0
+San Antonio - Legacy,San Antonio - Legacy,https://cmg-san.netalytics-cloud.com/Methasoft.Net.CMG.SanAntonio,Legacy,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+San Antonio - M2M,San Antonio - M2M,https://NS-san.netalytics-cloud.com/Methasoft.Net.NewSeason.SanAntonio,M2M,Live,Treatment Titans,Gulf,Texas,8.1.3.0
+Sarasota - Legacy,Sarasota - Legacy,https://cmg-sar.netalytics-cloud.com/Methasoft.Net.CMG.Sarasota,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Sarasota - M2M,Sarasota - M2M,https://NS-sar.netalytics-cloud.com/Methasoft.Net.NewSeason.Sarasota,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Savannah - Legacy,Savannah - Legacy,https://cmg-sav.netalytics-cloud.com/Methasoft.Net.CMG.Savannah,Legacy,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Savannah - M2M,Savannah - M2M,https://NS-sav.netalytics-cloud.com/Methasoft.Net.NewSeason.Savannah,M2M,Live,Treatment Titans,SouthEast,Georgia,8.1.3.0
+Semoran - Legacy,Semoran - Legacy,https://cmg-sem.netalytics-cloud.com/Methasoft.Net.CMG.Semoran,Legacy,Live,Coast to Coasties,Keystone,Indiana,8.1.3.0
+Semoran - M2M,Semoran - M2M,https://NS-sem.netalytics-cloud.com/Methasoft.Net.NewSeason.Semoran,M2M,Live,Coast to Coasties,Keystone,Indiana,8.1.3.0
+St. Augustine - Legacy,St. Augustine - Legacy,https://cmg-sta.netalytics-cloud.com/Methasoft.Net.CMG.St-Augustine,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+St. Augustine - M2M,St. Augustine - M2M,https://NS-sta.netalytics-cloud.com/Methasoft.Net.NewSeason.St-Augustine,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+St. Charles - Legacy,St. Charles - Legacy,https://cmg-stc.netalytics-cloud.com/Methasoft.Net.CMG.StCharles,Legacy,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Charles - M2M,St. Charles - M2M,https://NS-stc.netalytics-cloud.com/Methasoft.Net.NewSeason.StCharles,M2M,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Cloud - Legacy,St. Cloud - Legacy,https://cmg-stcl.netalytics-cloud.com/Methasoft.Net.CMG.StCloud,Legacy,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+St. Cloud - M2M,St. Cloud - M2M,https://NS-stcl.netalytics-cloud.com/Methasoft.Net.NewSeason.StCloud,M2M,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+St. George - Legacy,St. George - Legacy,https://cmg-stg.netalytics-cloud.com/methasoft.net.CMG.StGeorge,Legacy,Live,Coast to Coasties,West,Utah,8.1.3.0
+St. George - M2M,St. George - M2M,https://NS-stg.netalytics-cloud.com/methasoft.net.NewSeason.StGeorge,M2M,Live,Coast to Coasties,West,Utah,8.1.3.0
+St. Joseph - Legacy,St. Joseph - Legacy,https://cmg-stj.netalytics-cloud.com/Methasoft.Net.CMG.StJoseph,Legacy,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Joseph - M2M,St. Joseph - M2M,https://NS-stj.netalytics-cloud.com/Methasoft.Net.NewSeason.StJoseph,M2M,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Louis - Legacy,St. Louis - Legacy,https://cmg-stl.netalytics-cloud.com/Methasoft.Net.CMG.StLouis,Legacy,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Louis - M2M,St. Louis - M2M,https://NS-stl.netalytics-cloud.com/Methasoft.Net.NewSeason.StLouis,M2M,Live,Coast to Coasties,Mid-West,Missouri,8.1.3.0
+St. Paul - Legacy,St. Paul - Legacy,https://cmg-stpl.netalytics-cloud.com/Methasoft.Net.CMG.StPaul,Legacy,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+St. Paul - M2M,St. Paul - M2M,https://NS-stpl.netalytics-cloud.com/Methasoft.Net.NewSeason.StPaul,M2M,Live,Coast to Coasties,Mid-West,Minnesota,8.1.3.0
+St. Pete (Tarpon) - Legacy,St. Pete (Tarpon) - Legacy,https://cmg-stp.netalytics-cloud.com/Methasoft.Net.CMG.St-Pete,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+St. Pete (Tarpon) - M2M,St. Pete (Tarpon) - M2M,https://NS-stp.netalytics-cloud.com/Methasoft.Net.NewSeason.St-Pete,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Sunrise Metro - Legacy,Sunrise Metro - Legacy,https://cmg-sun.netalytics-cloud.com/methasoft.net.CMG.Sunrise,Legacy,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Sunrise Metro - M2M,Sunrise Metro - M2M,https://NS-sun.netalytics-cloud.com/Methasoft.Net.NewSeason.Sunrise,M2M,Live,Coast to Coasties,Mid Florida,Florida,8.1.3.0
+Tampa Metro - Legacy,Tampa Metro - Legacy,https://cmg-tam.netalytics-cloud.com/Methasoft.Net.CMG.Tampa,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Tampa Metro - M2M,Tampa Metro - M2M,https://NS-tam.netalytics-cloud.com/Methasoft.Net.NewSeason.Tampa,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+Tampa North - M2M,Tampa North - M2M,https://NS-TN.netalytics-cloud.com/Methasoft.Net.NewSeason.Tampa.North,M2M,Live,,,Florida,8.1.3.0
+Tri County - Legacy,Tri County - Legacy,https://cmg-tri.netalytics-cloud.com/Methasoft.Net.CMG.TriCounty,Legacy,Live,Treatment Titans,South,Alabama,8.1.3.0
+Tri County - M2M,Tri County - M2M,https://NS-tri.netalytics-cloud.com/Methasoft.Net.NewSeason.TriCounty,M2M,Live,Treatment Titans,South,Alabama,8.1.3.0
+West Palm Beach - Legacy,West Palm Beach - Legacy,https://cmg-wpb.netalytics-cloud.com/Methasoft.Net.CMG.WestPalmBeach,Legacy,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+West Palm Beach - M2M,West Palm Beach - M2M,https://NS-wpb.netalytics-cloud.com/Methasoft.Net.NewSeason.WestPalmBeach,M2M,Live,Coast to Coasties,Central Florida,Florida,8.1.3.0
+York County - Legacy,York County - Legacy,https://cmg-yor.netalytics-cloud.com/Methasoft.Net.CMG.YorkCounty,Legacy,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+York County - M2M,York County - M2M,https://NS-yor.netalytics-cloud.com/Methasoft.Net.NewSeason.YorkCounty,M2M,Live,Treatment Titans,SouthEast,South Carolina,8.1.3.0
+z Closed Clinics - Eau Claire - Legacy,https://cmg-eau.netalytics-cloud.com/Methasoft.Net.CMG.EauClaire,https://cmg-eau.netalytics-cloud.com/Methasoft.Net.CMG.EauClaire,Legacy,Closed,,Upper Mid-West,Wisconsin,7.1.4.3
+z Closed Clinics - Sumter County - Legacy,https://cmg-sum.netalytics-cloud.com/Methasoft.Net.CMG.SumterCounty,https://cmg-sum.netalytics-cloud.com/Methasoft.Net.CMG.SumterCounty,Legacy,Closed,,South,Alabama,7.1.4.3
+z Closed Clinics - Union - Legacy,https://cmg-uni.netalytics-cloud.com/Methasoft.Net.CMG.Union,https://cmg-uni.netalytics-cloud.com/Methasoft.Net.CMG.Union,Legacy,Closed,Zone 3,Northeast,Pennsylvania,7.1.4.3
+z Sandbox - 7143,https://cmg-ITSand.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox,https://cmg-ITSand.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox,Legacy,Sandbox,,,,7.1.4.3
+z Sandbox - 7804,https://cmg-ITSand.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox.7804,https://cmg-ITSand.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox.7804,Legacy,Sandbox,,,,7.8.0.4
+z Sandbox - 8130,z Sandbox - 8130,https://cmg-itsand81.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox.8130,Legacy,Sandbox,,,,8.1.3.0
+z Sandbox - RevCycle,https://cmg-itsand81.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox.8130,https://cmg-itsand81.netalytics-cloud.com/Methasoft.Net.CMG.ITSandbox.8130,Legacy,Sandbox,,,,7.1.4.3
+z State Template - Alabama,z State Template - Alabama,https://ns-AL.netalytics-cloud.com/Methasoft.Net.NewSeason.Alabama.Template,M2M,Template,,,Alabama,8.1.3.0
+z State Template - Colorado,z State Template - Colorado,https://ns-CO.netalytics-cloud.com/Methasoft.Net.NewSeason.Colorado.Template,M2M,Template,,,Colorado,8.1.3.0
+z State Template - Florida,z State Template - Florida,https://ns-FL.netalytics-cloud.com/Methasoft.Net.NewSeason.Florida.Template,M2M,Template,,,Florida,8.1.3.0
+z State Template - Georgia,z State Template - Georgia,https://ns-GA.netalytics-cloud.com/Methasoft.Net.NewSeason.Georgia.Template,M2M,Template,,,Georgia,8.1.3.0
+z State Template - Indiana,z State Template - Indiana,https://ns-IN.netalytics-cloud.com/Methasoft.Net.NewSeason.Indiana.Template,M2M,Template,,,Indiana,8.1.3.0
+z State Template - Kentucky,z State Template - Kentucky,https://ns-KY.netalytics-cloud.com/Methasoft.Net.NewSeason.Kentucky.Template,M2M,Template,,,Kentucky,8.1.3.0
+z State Template - Maine,z State Template - Maine,https://ns-ME.netalytics-cloud.com/Methasoft.Net.NewSeason.Maine.Template,M2M,Template,,,Maine,8.1.3.0
+z State Template - Maryland,z State Template - Maryland,https://ns-MD.netalytics-cloud.com/Methasoft.Net.NewSeason.Maryland.Template,M2M,Template,,,Maryland,8.1.3.0
+z State Template - Minnesota,z State Template - Minnesota,https://ns-MN.netalytics-cloud.com/Methasoft.Net.NewSeason.Minnesota.Template,M2M,Template,,,Minnesota,8.1.3.0
+z State Template - Mississippi,z State Template - Mississippi,https://ns-MS.netalytics-cloud.com/Methasoft.Net.NewSeason.Mississippi.Template,M2M,Template,,,Mississippi,8.1.3.0
+z State Template - Missouri,z State Template - Missouri,https://ns-MO.netalytics-cloud.com/Methasoft.Net.NewSeason.Missouri.Template,M2M,Template,,,Missouri,8.1.3.0
+z State Template - New Hampshire,z State Template - New Hampshire,https://ns-NH.netalytics-cloud.com/Methasoft.Net.NewSeason.NewHampshire.Template,M2M,Template,,,New Hampshire,8.1.3.0
+z State Template - New Mexico,z State Template - New Mexico,https://ns-NM.netalytics-cloud.com/Methasoft.Net.NewSeason.NewMexico.Template,M2M,Template,,,New Mexico,8.1.3.0
+z State Template - North Carolina,z State Template - North Carolina,https://ns-NC.netalytics-cloud.com/Methasoft.Net.NewSeason.NorthCarolina.Template,M2M,Template,,,North Carolina,8.1.3.0
+z State Template - Ohio,z State Template - Ohio,https://ns-OH.netalytics-cloud.com/Methasoft.Net.NewSeason.Ohio.Template,M2M,Template,,,Ohio,8.1.3.0
+z State Template - Oregon,z State Template - Oregon,https://ns-OR.netalytics-cloud.com/Methasoft.Net.NewSeason.Oregon.Template,M2M,Template,,,Oregon,8.1.3.0
+z State Template - South Carolina,z State Template - South Carolina,https://ns-SC.netalytics-cloud.com/Methasoft.Net.NewSeason.SouthCarolina.Template,M2M,Template,,,South Carolina,8.1.3.0
+z State Template - Texas,z State Template - Texas,https://ns-TX.netalytics-cloud.com/Methasoft.Net.NewSeason.Texas.Template,M2M,Template,,,Texas,8.1.3.0
+z State Template - Utah,z State Template - Utah,https://ns-UT.netalytics-cloud.com/Methasoft.Net.NewSeason.Utah.Template,M2M,Template,,,Utah,8.1.3.0
+z State Template - Virginia,z State Template - Virginia,https://ns-VA.netalytics-cloud.com/Methasoft.Net.NewSeason.Virginia.Template,M2M,Template,,,Virginia,8.1.3.0
+z Template - 8130,z Template - 8130,https://cmg-itsand.netalytics-cloud.com/Methasoft.Net.CMG.8130Template,M2M,Template,,,,8.1.3.0
+z Template - FL DON ,z Template - FL DON ,https://cmg-fltemp.netalytics-cloud.com/Methasoft.Net.Florida.DON,Legacy,Template,,,Florida,8.1.3.0
+z Template - New New Mexico,z Template - New New Mexico,https://cmg-nnm.netalytics-cloud.com/Methasoft.Net.CMG.NewNewMexico,M2M,Template,,,,8.1.3.0
+z Training - Lee.Training,https://cmg-ltr.netalytics-cloud.com/Methasoft.Net.CMG.Lee.Training,https://cmg-ltr.netalytics-cloud.com/Methasoft.Net.CMG.Lee.Training,Legacy,Sandbox,,,,7.8.0.4
+z Training - Training,https://cmg-train.netalytics-cloud.com/Methasoft.Net.CMG.Training,https://cmg-train.netalytics-cloud.com/Methasoft.Net.CMG.Training,Legacy,Sandbox,,,,7.1.4.3

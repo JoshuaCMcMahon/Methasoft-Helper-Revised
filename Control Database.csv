@@ -1,0 +1,8 @@
+Control,Type,Screen or Window,Variable,Formula,7.1.4.3,7.8.0.4,8.1.3.0
+Remote Server,Combobox,Login Window,RemoteServer_Combobox_LoginWindow,control[this.version].RemoteServer_Combobox_LoginWindow,WindowsForms10.COMBOBOX.app.0.30495d1_r7_ad11,WindowsForms10.COMBOBOX.app.0.30495d1_r7_ad11,WindowsForms10.COMBOBOX.app.0.13965fa_r1_ad11
+Username,Edit,Login Window,Username_Edit_LoginWindow,control[this.version].Username_Edit_LoginWindow,WindowsForms10.EDIT.app.0.30495d1_r7_ad11,WindowsForms10.EDIT.app.0.30495d1_r7_ad11,WindowsForms10.EDIT.app.0.13965fa_r1_ad11
+Password,Edit,Login Window,Password_Edit_LoginWindow,control[this.version].Password_Edit_LoginWindow,WindowsForms10.EDIT.app.0.30495d1_r7_ad12,WindowsForms10.EDIT.app.0.30495d1_r7_ad12,WindowsForms10.EDIT.app.0.13965fa_r1_ad12
+Change Password,Button,Login Window,ChangePassword_Button_LoginWindow,control[this.version].ChangePassword_Button_LoginWindow,WindowsForms10.BUTTON.app.0.30495d1_r7_ad11,WindowsForms10.BUTTON.app.0.30495d1_r7_ad11,WindowsForms10.BUTTON.app.0.13965fa_r1_ad11
+Sign In,Button,Login Window,SignIn_Button_LoginWindow,control[this.version].SignIn_Button_LoginWindow,WindowsForms10.BUTTON.app.0.30495d1_r7_ad13,WindowsForms10.BUTTON.app.0.30495d1_r7_ad13,WindowsForms10.BUTTON.app.0.13965fa_r1_ad13
+Exit,Button,Login Window,Exit_Button_LoginWindow,control[this.version].Exit_Button_LoginWindow,WindowsForms10.BUTTON.app.0.30495d1_r7_ad12,WindowsForms10.BUTTON.app.0.30495d1_r7_ad12,WindowsForms10.BUTTON.app.0.13965fa_r1_ad12
+Message Box,Static,Login Window,MessageBox_Static_LoginWindow,control[this.version].MessageBox_Static_LoginWindow,WindowsForms10.STATIC.app.0.30495d1_r7_ad11,WindowsForms10.STATIC.app.0.30495d1_r7_ad11,WindowsForms10.STATIC.app.0.13965fa_r1_ad16
