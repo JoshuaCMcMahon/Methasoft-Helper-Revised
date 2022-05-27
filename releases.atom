@@ -4,7 +4,18 @@
   <link type="text/html" rel="alternate" href="https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases"/>
   <link type="application/atom+xml" rel="self" href="https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases.atom"/>
   <title>Release notes from Methasoft-Helper-Revised</title>
-  <updated>2022-05-27T02:56:43Z</updated>
+  <updated>2022-05-27T17:20:30Z</updated>
+  <entry>
+    <id>tag:github.com,2008:Repository/496842589/v1.01</id>
+    <updated>2022-05-27T17:24:27Z</updated>
+    <link rel="alternate" type="text/html" href="https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases/tag/v1.01"/>
+    <title>Version 1.01</title>
+    <content type="html">&lt;p&gt;Added an AutoUpdater to the script to automatically pull all future releases posted on GitHub.&lt;/p&gt;</content>
+    <author>
+      <name>JoshuaCMcMahon</name>
+    </author>
+    <media:thumbnail height="30" width="30" url="https://avatars.githubusercontent.com/u/47692711?s=60&amp;v=4"/>
+  </entry>
   <entry>
     <id>tag:github.com,2008:Repository/496842589/v1.00</id>
     <updated>2022-05-27T15:11:12Z</updated>
