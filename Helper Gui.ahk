@@ -10,9 +10,11 @@ MainGUI:
   Gui, Splash:New, HwndSplashWindow
   Gui, +AlwaysOnTop -SysMenu +Owner -Caption  ; +Owner avoids a taskbar button.
   Gui, Font, s24
-  Gui, Add, Text,, Methasoft Helper Loading...
+  Gui, Add, Text, vSplashText, Methasoft Helper Loading...
   Gui, Font
   Gui, Splash:Show, NoActivate Center, Methasoft Helper  ; NoActivate avoids deactivating the currently active window.
+
+  CheckReleases()
 
   Gui, Main:New, HwndHelperHandle, Methasoft Helper
 
