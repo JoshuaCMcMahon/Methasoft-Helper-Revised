@@ -47,7 +47,8 @@ MainGUI:
   Gui, Add, Edit, w100 x+m vUsername_Edit Uppercase, % ini_file.Username
 
   Gui, Add, Text, xs vPassword_Text, Password:
-  Gui, Add, Edit, w100 x+m vPassword_Edit Password, % ini_file.Password
+  Gui, Add, Edit, w100 x+m vPassword_Edit Password
+  GuiControl,, Password_Edit, % ini_file.Password ; Entering the password like this avoids issues with special characters.
 
   Gui, Add, CheckBox, xs vChangePassword_Checkbox, Change Methasoft Password on Login
 
