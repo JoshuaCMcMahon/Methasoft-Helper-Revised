@@ -2,7 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Event  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-#SingleInstance Force
+#Singleinstance Force
 
 DetectHiddenWindows, On ; Fixes the issue where Methasoft's PID shows as closed when it's loading a new window (such as logging into Methasoft).
 Thread, Interrupt, 100 ; Allows SetTimer threads to be inturruptable so that they all run concurrently. Using Critical makes them uninturruptable, such as for an imagesearch (still needs to be tested).
@@ -11,8 +11,6 @@ Thread, Interrupt, 100 ; Allows SetTimer threads to be inturruptable so that the
 ; Setup Globals
 ; -------------------------------
 
-Process, Exist
-Global HelperPID := ErrorLevel
 Global ActiveSessions := {}
 Global console := ""
 Global critical_message := ""
@@ -26,7 +24,9 @@ Global ini_file := {}
 ; -------------------------------
 ; Main Program
 ; -------------------------------
-#Include Updater.ahk
+
+; msgbox, % control["7.1.4.3"].Username_Edit_LoginWindow
+
 
 Load_INI()
 Gosub MainGUI
