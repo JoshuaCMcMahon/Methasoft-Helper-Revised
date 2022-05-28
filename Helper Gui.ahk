@@ -170,17 +170,45 @@ MainGuiSize:
 
     GuiControlGet, Filters_Tab, Pos
     GuiControlGet, Filters_LegacyM2M_Listview, Pos
+    GuiControlGet, Filters_ApplyFilters_Button, Pos
 
     filter_listboxes_width := (Filters_TabW - margin*4)/3
+    filter_listboxes_height := ((Filters_TabH - Filters_ApplyFilters_ButtonH) - margin*4)/2
 
-    GuiControl, Main:Move, Filters_LegacyM2M_Listview, % "W" filter_listboxes_width
-    GuiControl, Main:Move, Filters_Type_Listview, % "W" filter_listboxes_width "X" filter_listboxes_width + (margin*2)
-    GuiControl, Main:Move, Filters_Version_Listview, % "W" filter_listboxes_width "X" (filter_listboxes_width * 2 ) + (margin*3)
+    if(filter_listboxes_height > 150)
+    {
+      filter_listboxes_height_limiter := 150
+      filter_listboxes_height := filter_listboxes_height + (filter_listboxes_height - filter_listboxes_height_limiter)
+    }
+    else
+    {
+      filter_listboxes_height_limiter := filter_listboxes_height
+    }
 
-    GuiControl, Main:Move, Filters_Zone_Listview, % "W" filter_listboxes_width
-    GuiControl, Main:Move, Filters_Region_Listview, % "W" filter_listboxes_width "X" filter_listboxes_width + (margin*2)
-    GuiControl, Main:Move, Filters_State_Listview, % "W" filter_listboxes_width "X" (filter_listboxes_width * 2 ) + (margin*3)
+    GuiControl, Main:Move, Filters_LegacyM2M_Listview, % "W" filter_listboxes_width "H" filter_listboxes_height_limiter
+    GuiControl, Main:Move, Filters_Type_Listview, % "W" filter_listboxes_width "X" filter_listboxes_width + (margin*2) "H" filter_listboxes_height_limiter
+    GuiControl, Main:Move, Filters_Version_Listview, % "W" filter_listboxes_width "X" (filter_listboxes_width * 2 ) + (margin*3) "H" filter_listboxes_height_limiter
 
+
+
+    GuiControl, Main:Move, Filters_Zone_Listview, % "W" filter_listboxes_width "H" filter_listboxes_height "Y" filter_listboxes_height_limiter + margin
+    GuiControl, Main:Move, Filters_Region_Listview, % "W" filter_listboxes_width "X" filter_listboxes_width + (margin*2) "H" filter_listboxes_height "Y" filter_listboxes_height_limiter + margin
+    GuiControl, Main:Move, Filters_State_Listview, % "W" filter_listboxes_width "X" (filter_listboxes_width * 2 ) + (margin*3) "H" filter_listboxes_height "Y" filter_listboxes_height_limiter + margin
+
+    GuiControlGet, Filters_Zone_Listview, Pos
+    GuiControl, Main:Move, Filters_ApplyFilters_Button, % "Y" Filters_Zone_ListviewY + Filters_Zone_ListviewH - 25
+    ; Filters_Zone_Listview
+
+
+    /*
+    Gui, Add, ListView, Section r10 w%quickWidth% Checked vFilters_LegacyM2M_Listview AltSubmit gListviewEvent, M2M/Legacy
+    Gui, Add, ListView, ys r10 w%quickWidth% Checked vFilters_Type_Listview AltSubmit gListviewEvent, Type
+    Gui, Add, ListView, ys r10 w%quickWidth% Checked vFilters_Version_Listview AltSubmit gListviewEvent, Version
+    Gui, Add, ListView, Section xs r10 w%quickWidth% Checked vFilters_Zone_Listview AltSubmit gListviewEvent, Zone
+    Gui, Add, ListView, ys r10 w%quickWidth% Checked vFilters_Region_Listview AltSubmit gListviewEvent, Region
+    Gui, Add, ListView, ys r10 w%quickWidth% Checked vFilters_State_Listview AltSubmit gListviewEvent, State
+    Gui, Add, Button, xs w80 vFilters_ApplyFilters_Button gApplyFilters, Apply Filters
+    */
 
     ; GuiControl, Main:Move, MySlider, % "X" Login_TabX + Autoadvance_CheckboxW "Y" Filters_TabH + margin "W" A_GuiWidth - (margin*3) - Autoadvance_CheckboxW
   }

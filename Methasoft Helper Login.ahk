@@ -137,13 +137,17 @@ OpenCheckedClinics()
 
 ListviewEvent()
 {
+  debug.print(, "ListviewEvent() - A_GuiControl: " A_GuiControl ", A_GuiEvent: " A_GuiEvent ", A_EventInfo: " A_EventInfo ".")
+
+  ; ctrl+A - select all records in the listview
   if(A_GuiEvent = "K" AND A_EventInfo = 65 AND GetKeyState("LControl", "P"))
   {
     Gui, Listview, % A_GuiControl
     LV_Modify(0, "Select")
   }
 
-  if(A_GuiEvent = "K" AND A_EventInfo = 67) ; C Button on Keybaord - Check Selected Records
+  ; Ctrl+C - Check Selected Records
+  else if(A_GuiEvent = "K" AND A_EventInfo = 67 AND GetKeyState("LControl", "P"))
   {
     Gui, Listview, % A_GuiControl
     RowNumber := 0  ; This causes the first loop iteration to start the search at the top of the list.
@@ -156,7 +160,8 @@ ListviewEvent()
     }
   }
 
-  if(A_GuiEvent = "K" AND A_EventInfo = 85)
+  ; Ctrl+U - Unselect selected records
+  else if(A_GuiEvent = "K" AND A_EventInfo = 85)
   {
     RowNumber := 0  ; This causes the first loop iteration to start the search at the top of the list.
     Loop
@@ -168,21 +173,23 @@ ListviewEvent()
     }
   }
 
-  if(A_GuiEvent = "DoubleClick")
+  ; Doubleclick - different depending on if the user doubleclicks on a record or in the listview but off a record.
+  else if(A_GuiEvent = "DoubleClick")
   {
     Gui, Listview, % A_GuiControl
-      if(LV_GetNext() != 0) ; if it is zero, then the user double clicked in the window but not on a specific item in the window.
+    if(LV_GetNext() != 0 AND A_GuiControl != "Filter_Listview") ; if it is not zero, then the user double clicked on a specific item. Don't enable on the main clinic filters listview, it's not good design
     {
       LV_Modify(0, "-Check")
       LV_Modify(LV_GetNext(), "Check")
     }
     else
     {
-      LV_Modify(LV_GetNext(), "Check")
+      LV_Modify(LV_GetNext(), "Check") ; the user clicked in the listview but not on a specific item; check all items in listview
     }
   }
 
-  if(A_GuiEvent = "K" AND A_EventInfo = 32)
+  ; Spacebar - toggle selected records
+  else if(A_GuiEvent = "K" AND A_EventInfo = 32)
   {
     Gui, Listview, % A_GuiControl
     RowNumber := 0  ; This causes the first loop iteration to start the search at the top of the list.
@@ -269,7 +276,7 @@ Filters:
   Gui, ListView, Filter_Listview
   LV_ModifyCol() ; Fit to width of data.
 
-  Gosub Apply
+  Apply()
 
 } Return
 
@@ -344,6 +351,7 @@ ApplyFilters()
     }
   }
   GuiControl, Enable, Filter_Listview
+  Apply()
 }
 
 ArrayContains(value, array)
@@ -380,7 +388,7 @@ GetCheckedListviewArray(Listview_Name)
 
 
 
-Apply:
+Apply()
 {
   Gui, Main:Default
   Gui, ListView, Filter_Listview
@@ -403,7 +411,7 @@ Apply:
   GuiControl, % "+Range0-" count, Clinic_Progress, 1
   Clinic_Progress()
   SB_SetText("Filters applied!")
-} Return
+}
 
 Hide:
 {
