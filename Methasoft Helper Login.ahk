@@ -1,4 +1,4 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Event  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -133,7 +133,11 @@ OpenCheckedClinics()
 
 }
 
-
+ShowActive_Button()
+{
+  TV_GetText(clinicName, TV_GetSelection()) ; Get the selected clinic's name
+  ActiveSession.Sessions[clinicName].Activate() ; Activate the selected Methasoft Window
+}
 
 ListviewEvent()
 {
@@ -219,6 +223,76 @@ ListviewEvent()
   }
 }
 
+ActiveSession_Event()
+{
+  debug.print(, A_Gui ", " A_GuiControl ", " A_GuiEvent ", " A_EventInfo)
+  Critical, On
+  if(A_GuiControl = "ActiveSessions_Treeview" AND A_GuiEvent = "DoubleClick") ; If the user doubleclicks on one of the active sessions, activate that Methasoft window
+  {
+    TV_GetText(clinicName, A_EventInfo)
+    debug.print(, "DoubleClicked on " clinicName " in the active sessions listview.")
+    DetectHiddenWindows, Off
+    WinActivate, % "ahk_pid" ActiveSession.Sessions[clinicName].PID
+    DetectHiddenWindows, On
+  }
+  else if(A_GuiControl = "ActiveSessions_Treeview" AND A_GuiEvent = "S")
+  {
+    for key, object in ActiveSession.Sessions
+    {
+      TV_Modify(object.ID, "-Check")
+    }
+    TV_Modify(A_EventInfo, "Check")
+  }
+
+}
+
+MainGuiContextMenu()
+{
+  debug.print("", "A_GuiControl: " A_GuiControl ", A_EventInfo: " A_EventInfo ", A_GuiX & A_GuiY: " A_GuiX ", " A_GuiY ", A_GuiEvent: " A_GuiEvent)
+
+  if(A_GuiControl = "ActiveSessions_Treeview") ; the user right clicked in the active sessions listview.
+  {
+    Critical, On ; Make this thread critical
+    if(A_EventInfo != 0) ; the user clicked on a specfic item
+    {
+      TV_GetText(clinicName, A_EventInfo)
+      ; Binds a function to a variable so it can be added to the Menu
+      MakeActive := ActiveSession.Sessions[clinicName].BindFunction("Activate")
+      CloseSession := ActiveSession.Sessions[clinicName].BindFunction("EndSession")
+
+      ; Make the Top Level Menu
+      Menu, ActiveSessions_MenuItem, Add, Show Window, % MakeActive
+      Menu, ActiveSessions_MenuItem, Icon, Show Window, Icons\icons8-application-window-96.ico
+
+      ; Add a Submenu for closing sessions
+      ; Menu, ActiveSessions_MenuItem_ConfirmClose, Add, Confirm Close Session, % CloseSession
+      ; Menu, ActiveSessions_MenuItem_ConfirmClose, Icon, Confirm Close Session, Icons\icons8-close-window-48.ico
+      ; Menu, ActiveSessions_Menu_ConfirmClose, Add, Close Session, % CloseSession
+
+      ; Connect the submenu(s) to the main menus
+      Menu, ActiveSessions_MenuItem, Add, Close Session, % CloseSession
+      Menu, ActiveSessions_MenuItem, Icon, Close Session, Icons\icons8-close-window-48.ico
+      ; Show the menu
+      Menu, ActiveSessions_MenuItem, Show
+    }
+    else if(TV_GetCount()) ; the user didn't click on an item but still clicked in the ActiveSession treeview
+    {
+      ; Binds a function to a variable so it can be added to the Menu
+      CloseAllSessions := Func("ActiveSession.EndSession").Bind(1)
+      totalClinics := TV_GetCount()
+
+      
+
+
+      Menu, ActiveSessions_Menu_ConfirmCloseAll, Add, Confirm Close All Session(s), % CloseAllSessions
+      Menu, ActiveSessions_Menu_ConfirmCloseAll, Icon, Confirm Close All Session(s), Icons\icons8-close-window-48.ico
+
+      Menu, ActiveSessions_Menu, Add, Close All Sessions, :ActiveSessions_Menu_ConfirmCloseAll
+
+      Menu, ActiveSessions_Menu, Show
+    }
+  }
+}
 
 Filters:
 {

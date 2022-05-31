@@ -1,11 +1,8 @@
 Class Methasoft_Controls
 {
-
-  ; Static Control := {}
-
   __New()
   {
-    
+
     debug.Print("", "Methasoft_Controls.__new() - Process Started.")
     ; Import the CSV File
     CSV_Load("Control Database.csv", "controlDatabase")
@@ -15,9 +12,6 @@ Class Methasoft_Controls
     ClassNN_Start := 6 ; What column does the ClassNN names start on.
 
     Methasoft_Versions := totalColumns - ClassNN_Start + 1
-
-
-
 
     ; Setup objects for each of the version of Methasoft in the csv file.
     Loop, % Methasoft_Versions
@@ -69,13 +63,4 @@ Class Methasoft_Controls
   {
 
   }
-
-
-
-
 }
-
-
-
-
-; control[this.verison][RemoteServer_Combobox_LoginWindow]

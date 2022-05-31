@@ -59,8 +59,8 @@ MainGUI:
   Gui, Add, Tab3, vActiveSessions_Tab, Active Methasoft Sessions
 
   ; Gui, Add, ListView, r3 vActiveSessions_Listview Checked -Hdr, Name
-  Gui, Add, Treeview, r3 vActiveSessions_Treeview Checked -Lines
-  Gui, Add, Button, w180 vShowActive_Button xs, Show Active Database
+  Gui, Add, Treeview, r3 vActiveSessions_Treeview Checked -Lines gActiveSession_Event
+  Gui, Add, Button, w180 vShowActive_Button xs gShowActive_Button, Show Active Database
 
   ; Gui, Filter:New,, Clinic Filters
   Gui, Add, Tab3, vFilters_Tab ys, Clinic Filters|Filters

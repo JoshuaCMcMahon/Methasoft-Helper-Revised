@@ -21,11 +21,15 @@ Class DebugClass
 
   Gui(WindowName, GuiOptions)
   {
-    global Debug_Listview
+    Global Debug_Listview
+    Global DebugListview_Autoscroll_Checkbox
+    Global Debug_Listview_Handle
+    Global DebugListview_Autoscroll_Checkbox_Handle
 
     Gui, Debug:New, Resize, % WindowName
 
-    Gui, Add, ListView, vDebug_Listview, Timestamp|Clinic|Message
+    Gui, Debug:Add, ListView, vDebug_Listview HwndDebug_Listview_Handle, Timestamp|Clinic|Message
+    Gui, Debug:Add, CheckBox, vDebugListview_Autoscroll_Checkbox HwndDebugListview_Autoscroll_Checkbox_Handle Checked, Autoscroll Messages
 
     if(GuiOptions != "")
     {
@@ -35,11 +39,18 @@ Class DebugClass
 
     DebugGuiSize:
     {
+      currentGui := A_DefaultGui ; Get the current default gui
+      Gui, Debug:Default
 
       if(A_GuiWidth != "" AND A_GuiHeight != "")
       {
-        GuiControl, Debug:MoveDraw, Debug_Listview, % "w" A_GuiWidth - 20 "h" A_GuiHeight - 20
+        GuiControlGet, %DebugListview_Autoscroll_Checkbox_Handle%, Debug:Pos
+        GuiControl, Debug:MoveDraw, Debug_Listview, % "w" A_GuiWidth - 20 "h" A_GuiHeight - 20 - %DebugListview_Autoscroll_Checkbox_Handle%H -10
+
+        GuiControlGet, %Debug_Listview_Handle%, Debug:Pos
+        GuiControl, Debug:MoveDraw, DebugListview_Autoscroll_Checkbox, % "Y" %Debug_Listview_Handle%Y + %Debug_Listview_Handle%H + 10
       }
+      Gui, % currentGui ":Default"
     } Return
 
   }
@@ -61,9 +72,14 @@ Class DebugClass
     FormatTime, TimeNow3, % TimeNow[1], tt
 
     ; msgbox, % A_MSec/1000 " | " TimeNow
-    LV_Add("Vis", TimeNow1 TimeNow[2] " " TimeNow3, clinic, message)
+    LV_Add(, TimeNow1 TimeNow[2] " " TimeNow3, clinic, message)
     LV_ModifyCol()
-    LV_Modify(LV_GetCount(), "vis")
+
+    GuiControlGet, DebugListview_Autoscroll_Checkbox
+    if(DebugListview_Autoscroll_Checkbox)
+    {
+      LV_Modify(LV_GetCount(), "vis")
+    }
 
     ; Set the current defaults for the gui and listviews to their previous values
     Gui, % currentGui ":Default"
@@ -77,5 +93,4 @@ Class DebugClass
 F12::
 {
   Gui, Debug:Show, w800 h600
-  ; debug.print(,"Show the debug window.")
 } Return

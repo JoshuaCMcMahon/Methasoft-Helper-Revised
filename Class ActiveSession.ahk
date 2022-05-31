@@ -2,6 +2,7 @@ class ActiveSession
 {
 
   Static Sessions := {}
+  Static BoundFunctions := {}
 
 
 
@@ -14,6 +15,11 @@ class ActiveSession
     this.name := clinic_name
 
     this.ID := TV_Add(clinic_name, 0, "Sort")
+    if(ActiveSession.Sessions.Count() = 0) ; if this is the first clinic opened
+    {
+      TV_Modify(this.ID, "Check") ; Check the clinic name on the Active Sessions List.
+    }
+
 
 
 
@@ -87,6 +93,31 @@ class ActiveSession
       ActiveSession.Sessions[clinicName] := new ActiveSession(clinicName)
     }
 
+  }
+
+  BindFunction(method, parameters := "")
+  {
+    ; key := method parameters
+    this.BoundFunctions[method parameters] := ObjBindMethod(this, method, parameters)
+    debug.print("", "Created a BoundFunction for " this.name " with a key of " method parameters ".")
+    return this.BoundFunctions[method parameters]
+  }
+
+  Activate()
+  {
+    DetectHiddenWindows, Off
+    WinActivate, % "ahk_pid" this.PID
+    DetectHiddenWindows, On
+  }
+
+  DeleteBoundFunctions()
+  {
+    for index in this.BoundFunctions
+    {
+      this.BoundFunctions.Delete(index)
+      counter := A_Index
+    }
+    debug.print(this.name, "Deleted " counter " BoundFunction elements.")
   }
 
   MethasoftClosed()
@@ -226,12 +257,47 @@ class ActiveSession
 
   }
 
-  EndSession()
+  EndSession(AllSessions = 0)
   {
-    debug.print(this.name, "ActiveSession.EndSession called.")
-    Critical, On
-    Timer.DeleteAll(this)
-    ActiveSession.Sessions[this.name] := ""
-  }
+    if(AllSessions) ; close all current sessions
+    {
+      Critical, On
+      SessionsToClose := []
+      for key, object in ActiveSession.Sessions
+      {
+        SessionsToClose.push(object)
+      }
 
+      for key, object in SessionsToClose
+      {
+        object.EndSession()
+      }
+    }
+    else
+    {
+      Critical, On
+      debug.print(this.name, "ActiveSession.EndSession called.")
+
+      Process, Exist, % this.PID
+      if(ErrorLevel) ; If this Methasoft session still exists, kill it. Useful for any case when you want to end Methasoft from the Helper instead of just waiting for Methasoft to close.
+      {
+        Process, Close, % this.PID
+      }
+
+      Timer.DeleteAll(this) ; Kill all the timers for this session.
+      this.DeleteBoundFunctions() ; Delete all bound functions associated with this instance of Methasoft.
+
+
+      ; The below command forces this session to close by calling the parent object and deleting this object from it.
+      ; Added for the MainGuiContextMenu() when the user right clicks on the active sessions.
+      ; This is needed because you have to pass a function with parameters into the Menu Item that shows up,
+      ; but you can't do that in the menu command directly. Then the funcObject still has that reference to this object,
+      ; meaning this.__delete() won't normally execute.
+      ; Edit: everything broke, below command doesn't work anymore; calling this.__delete() manually.
+      ; this.base.Delete(this)
+
+
+      this.__delete()
+    }
+  }
 }
