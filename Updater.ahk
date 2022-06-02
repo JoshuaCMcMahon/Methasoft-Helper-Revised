@@ -51,21 +51,68 @@ CheckReleases()
   }
 
   ; Get currently installed version information
-  currentVersion := FileOpen("currentVersion", "rw")
-  timeInFile := currentVersion.Read()
-  timeDifference := timeInFile
-  EnvSub, timeDifference, % latestUpdate, seconds
-
-  ; UpdateHelper(URL)
-  if (timeDifference < 0 OR timeInFile = "")
+  currentVersion_Exists := FileExist("currentVersion") ; Check to see if currentVersion exists.
+  if(currentVersion_Exists != "") ; if it does exist, do the following.
   {
-    UpdateHelper(URL)
-    currentVersion.Write(latestUpdate) ; write the newest date after the update completed.
+    currentVersion := FileOpen("currentVersion", "rw")
+    timeInFile := currentVersion.Read()
+    timeDifference := timeInFile
+    EnvSub, timeDifference, % latestUpdate, seconds
+  }
+  else ; otherwise if currentVersion doesn't exist, do the following.
+  {
+    timeInFile := ""
+  }
+
+  if(InStr(timeInFile, "Error")) ; If currentVersion contains the word "Error"
+  {
+    msgbox, % "Methasoft Helper had issues updating; opening normally." ; Let the user know something went wrong, but otherwise open normally.
+  }
+  else if (timeDifference < 0 OR timeInFile = "") ; if helper needs updating, do the following.
+  {
+    if(ini_file.Autoupdate) ; if the user allows autoupdate based on the config file, run it.
+    {
+      Gosub PrepareUpdate
+    }
+    else ; if the user doesn't allow autoupdate based on the config file,
+    {
+      ; Hide the window so the user can see the msgbox.
+      Gui, Splash:Hide
+      msgbox, 4, Update Avaliable, % "There is an update for Methasoft Helper, would you like to install it?"
+      Gui, Splash:Show
+      IfMsgbox Yes
+      {
+        Gosub PrepareUpdate
+      }
+      else
+      {
+        ; Don't update, just keep swimming.
+      }
+    }
+
   }
   else
   {
     ; msgbox, no new updates
   }
+
+  Return
+
+  PrepareUpdate:
+  {
+    FileDelete, % "currentVersion" ; clear out the old version of the file.
+    currentVersion := FileOpen("currentVersion", "rw") ; create a new version of the file.
+    results := UpdateHelper(URL) ; run the updater
+    if(results = "Error") ; if the updater returned an error...
+    {
+      currentVersion.Write(results) ; write that error to the currentVersion file.
+    }
+    else
+    {
+      currentVersion.Write(latestUpdate) ; otherwise write the newest date after the update completed.
+    }
+    Reload
+  } Return
 }
 
 UpdateHelper(URL)
@@ -97,7 +144,12 @@ UpdateHelper(URL)
   ErrorCount := MoveFilesAndFolders(A_ScriptDir "\Extracted\Methasoft-Helper-Revised\", A_ScriptDir "\", 1) ; Move everything from Methasoft-Helper-Revised to the current script directory.
   if (ErrorCount != 0)
   {
+    results := "Error"
     MsgBox %ErrorCount% files/folders could not be moved.
+  }
+  else
+  {
+    results := "Success"
   }
 
   FileRemoveDir, % A_ScriptDir "\Extracted", 1 ; Delete the extracted folder and all it's contents
@@ -106,7 +158,7 @@ UpdateHelper(URL)
     msgbox, couldn't delete
   }
 
-  Reload
+  return results
 
 }
 
@@ -117,31 +169,36 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite := false)
 ; returns the number of files/folders that could not be moved. This function requires [v1.0.38+]
 ; because it uses FileMoveDir's mode 2.
 {
-    if (DoOverwrite = 1)
+
+  if (DoOverwrite = 1)
+  {
+    DoOverwrite := 2  ; See FileMoveDir for description of mode 2 vs. 1.
+    OverwriteFiles := 1 ; Needed to fix the overwrite Files command; 2 is not considered a valid True statement
+  }
+  else
+  {
+    OverwriteFiles := 0
+  }
+
+  ; First move all the files (but not the folders):
+  FileMove, %SourcePattern%, %DestinationFolder%, % OverwriteFiles
+  ErrorCount := ErrorLevel
+
+  ; Now move all the folders:
+  Loop, Files, %SourcePattern%\*, D
+  {
+    if(InStr(A_LoopFileAttrib, "D")) ; if the current item is a directory
     {
-      DoOverwrite := 2  ; See FileMoveDir for description of mode 2 vs. 1.
-      OverwriteFiles := 1 ; Needed to fix the overwrite Files command; 2 is not considered a valid True statement
-    }
-    else
-    {
-      OverwriteFiles := 0
+      FileMoveDir, %A_LoopFileFullPath%, %DestinationFolder%\%A_LoopFileName%, %DoOverwrite%
+      ErrorCount += ErrorLevel
     }
 
-    ; First move all the files (but not the folders):
-    FileMove, %SourcePattern%, %DestinationFolder%, % OverwriteFiles
-    ErrorCount := ErrorLevel
-    ; msgbox, % ErrorCount
-    ; Now move all the folders:
-    Loop, %SourcePattern%, 2  ; 2 means "retrieve folders only".
+    if ErrorLevel  ; Report each problem folder by name.
     {
-        FileMoveDir, %A_LoopFileFullPath%, %DestinationFolder%\%A_LoopFileName%, %DoOverwrite%
-        ErrorCount += ErrorLevel
-        if ErrorLevel  ; Report each problem folder by name.
-        {
-          MsgBox Could not move %A_LoopFileFullPath% into %DestinationFolder%.
-        }
+      MsgBox Could not move %A_LoopFileFullPath% into %DestinationFolder%.
     }
-    return ErrorCount
+  }
+  return ErrorCount
 }
 
 

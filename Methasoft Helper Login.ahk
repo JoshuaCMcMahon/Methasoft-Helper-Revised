@@ -77,13 +77,16 @@ Stats()
 
 Load_INI()
 {
+  ; IniRead, OutputVar, Filename, Section, Key, Default value if undefined
   IniRead, Username, Helper.ini, User, Username, %A_Space%
   IniRead, Password, Helper.ini, User, Password, %A_Space%
   ini_file.Username := Username
   ini_file.Password := Password
 
   IniRead, Autoadvance, Helper.ini, Helper Preferences, Autoadvance, 1
+  IniRead, Autoupdate, Helper.ini, Helper Preferences, Autoupdate, 1
   ini_file.Autoadvance := Autoadvance
+  ini_file.Autoupdate := Autoupdate
 
   IniRead, AutocloseNightlyProcesses, Helper.ini, Methasoft Preferences, AutocloseNightlyProcesses, 1
   ini_file.AutocloseNightlyProcesses := AutocloseNightlyProcesses
@@ -281,7 +284,7 @@ MainGuiContextMenu()
       CloseAllSessions := Func("ActiveSession.EndSession").Bind(1)
       totalClinics := TV_GetCount()
 
-      
+
 
 
       Menu, ActiveSessions_Menu_ConfirmCloseAll, Add, Confirm Close All Session(s), % CloseAllSessions
