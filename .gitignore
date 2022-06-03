@@ -8,3 +8,6 @@ latestUpdate
 Update.zip
 Extracted/
 currentVersion
+.gitignore
+.gitattributes
+.git/

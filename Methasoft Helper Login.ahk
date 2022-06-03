@@ -77,18 +77,29 @@ Stats()
 
 Load_INI()
 {
+  inifile := "Helper.ini"
+
   ; IniRead, OutputVar, Filename, Section, Key, Default value if undefined
-  IniRead, Username, Helper.ini, User, Username, %A_Space%
-  IniRead, Password, Helper.ini, User, Password, %A_Space%
+
+  ; Read the ini file, then write the same value back to it. This will create any keys that don't already exist without overwriting the user's preferences.
+  IniRead, Username, % inifile, User, Username, %A_Space%
+  IniWrite, % Username, % inifile, User, Username
   ini_file.Username := Username
+
+  IniRead, Password, % inifile, User, Password, %A_Space%
+  IniWrite, % Password, % inifile, User, Password
   ini_file.Password := Password
 
-  IniRead, Autoadvance, Helper.ini, Helper Preferences, Autoadvance, 1
-  IniRead, Autoupdate, Helper.ini, Helper Preferences, Autoupdate, 1
+  IniRead, Autoadvance, % inifile, Helper Preferences, Autoadvance, 1
+  IniWrite, % Autoadvance, % inifile, Helper Preferences, Autoadvance
   ini_file.Autoadvance := Autoadvance
+
+  IniRead, Autoupdate, % inifile, Helper Preferences, Autoupdate, 1
+  IniWrite, % Autoupdate, % inifile, Helper Preferences, Autoupdate
   ini_file.Autoupdate := Autoupdate
 
-  IniRead, AutocloseNightlyProcesses, Helper.ini, Methasoft Preferences, AutocloseNightlyProcesses, 1
+  IniRead, AutocloseNightlyProcesses, % inifile, Methasoft Preferences, AutocloseNightlyProcesses, 1
+  IniWrite, % AutocloseNightlyProcesses, % inifile, Methasoft Preferences, AutocloseNightlyProcesses
   ini_file.AutocloseNightlyProcesses := AutocloseNightlyProcesses
 }
 

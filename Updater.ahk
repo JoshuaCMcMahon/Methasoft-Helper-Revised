@@ -1,7 +1,14 @@
 CheckReleases()
 {
   ; Download the latest release information
-  UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases.atom, releases.atom
+  if(ini_file.Autoupdate = 2) ; if config file shows you want pre-releases, then download that isntead
+  {
+    UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/tags.atom, releases.atom
+  }
+  else ; otherwise just download the main releases
+  {
+    UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases.atom, releases.atom
+  }
 
   ; Get the date and information about the latest release
   Loop, Read, releases.atom
@@ -64,6 +71,7 @@ CheckReleases()
     timeInFile := ""
   }
 
+  ; Determine if we need to update or not
   if(InStr(timeInFile, "Error")) ; If currentVersion contains the word "Error"
   {
     msgbox, % "Methasoft Helper had issues updating; opening normally." ; Let the user know something went wrong, but otherwise open normally.
@@ -102,15 +110,17 @@ CheckReleases()
   {
     FileDelete, % "currentVersion" ; clear out the old version of the file.
     currentVersion := FileOpen("currentVersion", "rw") ; create a new version of the file.
-    results := UpdateHelper(URL) ; run the updater
-    if(results = "Error") ; if the updater returned an error...
+    ErrorCountArray := UpdateHelper(URL) ; run the updater
+    if(ErrorCountArray[1] != 0) ; if the updater returned an error...
     {
-      currentVersion.Write(results) ; write that error to the currentVersion file.
+      currentVersion.Write(ErrorCountArray[1] " Files/Folders couldn't be overwritten:`n" ErrorCountArray[2]) ; write that error to the currentVersion file.
     }
     else
     {
       currentVersion.Write(latestUpdate) ; otherwise write the newest date after the update completed.
+      Run, https://joshuamcmahon.notion.site/Change-Log-3b7c260194d64a04aeab0c09b6204003
     }
+
     Reload
   } Return
 }
@@ -132,6 +142,7 @@ UpdateHelper(URL)
   ; Process, Close, % HelperPID
 
   UrlDownloadToFile, % URL, Update.zip ; Download the latest update from GitHub
+  FileRemoveDir, % A_ScriptDir "\Extracted", 1 ; Delete the Extracted folder if it already exists
   Unzip(A_ScriptDir "\Update.zip", A_ScriptDir "\Extracted") ; extract it to Update.zip
   FileDelete, % A_ScriptDir "\Update.zip" ; Delete the original zip file; don't need it anymore.
   Loop, Files, % A_ScriptDir "\Extracted\*", D ; iterate through all the folders in Extracted and rename to "Methasoft-Helper-Revised"; there should only be one folder.
@@ -141,24 +152,17 @@ UpdateHelper(URL)
 
 
 
-  ErrorCount := MoveFilesAndFolders(A_ScriptDir "\Extracted\Methasoft-Helper-Revised\", A_ScriptDir "\", 1) ; Move everything from Methasoft-Helper-Revised to the current script directory.
-  if (ErrorCount != 0)
-  {
-    results := "Error"
-    MsgBox %ErrorCount% files/folders could not be moved.
-  }
-  else
-  {
-    results := "Success"
-  }
+  ErrorCountArray := MoveFilesAndFolders(A_ScriptDir "\Extracted\Methasoft-Helper-Revised\", A_ScriptDir "\", 1) ; Move everything from Methasoft-Helper-Revised to the current script directory.
+
 
   FileRemoveDir, % A_ScriptDir "\Extracted", 1 ; Delete the extracted folder and all it's contents
   if(ErrorLevel)
   {
-    msgbox, couldn't delete
+    ErrorCountArray[1] += 1
+    ErrorCountArray[2] .= "Couldn't delete " A_ScriptDir "\Extracted.`n"
   }
 
-  return results
+  return ErrorCountArray
 
 }
 
@@ -169,7 +173,7 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite := false)
 ; returns the number of files/folders that could not be moved. This function requires [v1.0.38+]
 ; because it uses FileMoveDir's mode 2.
 {
-
+  debugArray := [0, ""]
   if (DoOverwrite = 1)
   {
     DoOverwrite := 2  ; See FileMoveDir for description of mode 2 vs. 1.
@@ -182,7 +186,7 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite := false)
 
   ; First move all the files (but not the folders):
   FileMove, %SourcePattern%, %DestinationFolder%, % OverwriteFiles
-  ErrorCount := ErrorLevel
+  debugArray[1] := ErrorLevel
 
   ; Now move all the folders:
   Loop, Files, %SourcePattern%\*, D
@@ -190,15 +194,15 @@ MoveFilesAndFolders(SourcePattern, DestinationFolder, DoOverwrite := false)
     if(InStr(A_LoopFileAttrib, "D")) ; if the current item is a directory
     {
       FileMoveDir, %A_LoopFileFullPath%, %DestinationFolder%\%A_LoopFileName%, %DoOverwrite%
-      ErrorCount += ErrorLevel
+      debugArray[1] += ErrorLevel
     }
 
     if ErrorLevel  ; Report each problem folder by name.
     {
-      MsgBox Could not move %A_LoopFileFullPath% into %DestinationFolder%.
+      debugArray[2] .= "Could not move " A_LoopFileFullPath " into " DestinationFolder ".`n"
     }
   }
-  return ErrorCount
+  return debugArray
 }
 
 
