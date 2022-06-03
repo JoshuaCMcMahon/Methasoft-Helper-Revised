@@ -12,3 +12,4 @@ currentVersion
 .gitattributes
 .git/
 latestRelease.json
+prereleases.atom
