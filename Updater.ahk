@@ -1,61 +1,84 @@
 CheckReleases()
 {
-  ; Download the latest release information
-  if(ini_file.Autoupdate = 2) ; if config file shows you want pre-releases, then download that isntead
+  ; Download the latest release or prerelease information
+  if(ini_file.Autoupdate = 2) ; if config file shows you want prereleases, then download that isntead
   {
-    UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/tags.atom, releases.atom
+
+    UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases.atom, prereleases.atom
+
+    ; Read the date and information about the latest prerelease
+    Loop, Read, prereleases.atom
+    {
+      if(A_Index = 1 AND InStr(A_LoopReadLine, "<?xml") = 0) ; check to make sure we have an xml file
+      {
+        msgbox, not valid XML
+        Return
+      }
+
+      if(InStr(A_LoopReadLine, "<entry>"))
+      {
+        foundEntry := 1
+      }
+
+      if(InStr(A_LoopReadLine, "<updated>") AND foundEntry = 1)
+      {
+        latestUpdate := Trim(A_LoopReadLine) ; Get rid of any leading or trailing whitespace.
+
+        latestUpdate := SubStr(latestUpdate, 10, 19)
+
+        RemoveCharacters := ["-", ":", "T"]
+
+        for index, value in RemoveCharacters ; get rid of a bunch of different characters.
+        {
+          latestUpdate := StrReplace(latestUpdate, value)
+        }
+
+      }
+      linkposition := InStr(A_LoopReadLine, " href=")
+      if(linkposition AND foundEntry)
+      {
+        URL := SubStr(A_LoopReadLine, linkposition + 7)
+        URL := Trim(URL)
+        URL := StrReplace(URL, """/>")
+
+        replacements := {"/releases/": "/archive/refs/", "/tag/": "/tags/"}
+        for key, value in replacements
+        {
+          URL := StrReplace(URL, key, value)
+        }
+
+        URL .= ".zip"
+        Break
+      }
+    }
+
+
   }
   else ; otherwise just download the main releases
   {
-    UrlDownloadToFile, https://github.com/JoshuaCMcMahon/Methasoft-Helper-Revised/releases.atom, releases.atom
+    UrlDownloadToFile, https://api.github.com/repos/JoshuaCMcMahon/Methasoft-Helper-Revised/releases/latest, latestRelease.json
+    FileRead, latestReleaseJSON, latestRelease.json
+
+    published_at_location := InStr(latestReleaseJSON, "published_at")
+    published_at_starting := published_at_location + 15
+    published_at_ending := InStr(latestReleaseJSON, Chr(34), 0, published_at_starting, 1)
+
+    latestUpdate := SubStr(latestReleaseJSON, published_at_starting, published_at_ending - published_at_starting)
+
+    RemoveCharacters := ["-", ":", "T", "Z"]
+    for index, value in RemoveCharacters ; get rid of a bunch of different characters.
+    {
+      latestUpdate := StrReplace(latestUpdate, value)
+    }
+
+    zipball_url_location := InStr(latestReleaseJSON, "zipball_url")
+    zipball_url_starting := zipball_url_location + 14
+    zipball_url_ending := InStr(latestReleaseJSON, Chr(34), 0, zipball_url_starting, 1)
+
+    URL := SubStr(latestReleaseJSON, zipball_url_starting, zipball_url_ending - zipball_url_starting)
   }
 
-  ; Get the date and information about the latest release
-  Loop, Read, releases.atom
-  {
-    if(A_Index = 1 AND InStr(A_LoopReadLine, "<?xml") = 0) ; check to make sure we have an xml file
-    {
-      msgbox, not valid XML
-      Return
-    }
 
-    if(InStr(A_LoopReadLine, "<entry>"))
-    {
-      foundEntry := 1
-    }
-
-    if(InStr(A_LoopReadLine, "<updated>") AND foundEntry = 1)
-    {
-      latestUpdate := Trim(A_LoopReadLine) ; Get rid of any leading or trailing whitespace.
-
-      latestUpdate := SubStr(latestUpdate, 10, 19)
-
-      RemoveCharacters := ["-", ":", "T"]
-
-      for index, value in RemoveCharacters ; get rid of a bunch of different characters.
-      {
-        latestUpdate := StrReplace(latestUpdate, value)
-      }
-      ; msgbox, % latestUpdate
-      ; FormatTime, latestUpdate, % latestUpdate, yyyy MM dd - hh mm ss
-    }
-    linkposition := InStr(A_LoopReadLine, " href=")
-    if(linkposition AND foundEntry)
-    {
-      URL := SubStr(A_LoopReadLine, linkposition + 7)
-      URL := Trim(URL)
-      URL := StrReplace(URL, """/>")
-
-      replacements := {"/releases/": "/archive/refs/", "/tag/": "/tags/"}
-      for key, value in replacements
-      {
-        URL := StrReplace(URL, key, value)
-      }
-
-      URL .= ".zip"
-      Break
-    }
-  }
 
   ; Get currently installed version information
   currentVersion_Exists := FileExist("currentVersion") ; Check to see if currentVersion exists.
@@ -113,7 +136,7 @@ CheckReleases()
     ErrorCountArray := UpdateHelper(URL) ; run the updater
     if(ErrorCountArray[1] != 0) ; if the updater returned an error...
     {
-      currentVersion.Write(ErrorCountArray[1] " Files/Folders couldn't be overwritten:`n" ErrorCountArray[2]) ; write that error to the currentVersion file.
+      currentVersion.Write("Error`n" ErrorCountArray[1] " Files/Folders couldn't be overwritten:`n" ErrorCountArray[2]) ; write that error to the currentVersion file.
     }
     else
     {
